@@ -1,0 +1,13 @@
+[package]
+name = "ws-server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hyper = { version = "0.14", default-features = false, features =  ["http1", "server", "tcp"]  }
+tokio = { workspace = true, default-features = false, features = ["rt"] }
+tokio-util = { workspace = true }
+websocket-codec = { version = "0.5.2" }
+futures-util = { version = "0.3", default-features = false, features = ["sink"] }

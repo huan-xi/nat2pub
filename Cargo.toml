@@ -1,0 +1,36 @@
+[workspace]
+members = [ "stun","ws-server"]
+
+[workspace.dependencies]
+tokio = { version = "1.37.0", features = ["full"] }
+futures-util = {features = ["sink"]}
+tokio-util = { version = "0.7.10", default-features = false, features = ["codec"] }
+log = "0.4"
+
+
+[package]
+name = "nat2pub"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+stun = { path = "stun" }
+igd = { version = "0.12.1", features = ["aio"] }
+log = "0.4"
+stun-format = { version = "1.0.1", features = ["fmt", "rfc3489"] }
+tokio={workspace = true}
+thiserror = "1.0.58"
+anyhow = "1.0.81"
+
+serde = { version = "1.0.130", features = ["derive"] }
+websocket-lite = "0.5.2"
+#serde_yaml = "0.8.0"
+toml = "0.8.12"
+futures-util.workspace=true
+#tokio-util = "0.7.10"
+url = "2.5.0"
+rand = "0.8.5"
+http = "1.1.0"
+env_logger= "0.10.0"

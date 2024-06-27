@@ -1,0 +1,4 @@
+stun_server = []
+keep_alive_server = []
+[[services]]
+upnp_addr = "192.168.68.1"
